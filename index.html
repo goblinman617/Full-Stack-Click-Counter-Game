@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <p>login</p>
+
+    <form class="" action="index.php" method="get">
+        <p>username: <input type="text" name="uname", > </p>
+        <p>password: <input type="text" name="pass", > </p>
+        <input type="submit" id="login" name="login" value="login">
+        &emsp;&emsp;
+        <input type="submit" id="register" name="register" value="register">
+    </form>
+
+
+    <script>
+        let login = sessionStorage.getItem('Login');
+        if (login == 'false'){
+            document.write("<p>invalid username or password</p>");
+        }
+    </script>
+
+</body>
+</html>

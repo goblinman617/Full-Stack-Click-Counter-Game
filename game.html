@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href='game.css'></link>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="game.js"></script>
+    <title>Game</title>
+</head>
+<body>
+
+    <p>click button to start</p>
+    <button id="click-counter" class="button">click button</button>
+    <br><br><br>
+
+    <table>
+        <td id=clicks>0</td>
+        <td id=describe-cps>clicks per second: </td>
+        <td id=cps>0</td>
+    </table>
+
+    <br><br><br>
+    
+    <form action="game.php" method="post" id="form">
+        <input type="hidden" id="f-username" name="f-username" value=""></input>
+        <input type="hidden" id="f-clicks" name="f-clicks" value=""></input>
+        <input type="hidden" id="f-cps" name="f-cps" value=""></input>
+        <input type="hidden" id="f-date" name="f-date" value=""></input>
+
+        <input type="submit" id="restart-game" name="restart-game" value="restart-game">
+        <br><br><br>
+        <input type="submit" id="view-scores" name="view-scores" value="view-scores">
+        <br><br><br>
+        <input type="submit" id="logout" name="logout" value="logout">
+
+    </form>
+
+
+</body>
+</html>
