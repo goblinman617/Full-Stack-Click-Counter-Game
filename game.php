@@ -1,4 +1,5 @@
 <?php 
+session_start();
 $servername = "localhost";
 $db_username = "bhanson";
 $db_password = "password";
@@ -25,6 +26,8 @@ if(isset($_POST['restart-game'])){
         location.href = 'game.html';
 
         </script>";
+
+        return;
     }
 
     $clicks = intval($clicks);
@@ -53,9 +56,11 @@ if(isset($_POST['view-scores'])){
     if ($clicks == "" || $clicks == "0"){ // no score to save
         echo "<script type='text/javascript'>
 
-        location.href = 'score-page.html';
+        location.href = 'score-page.php';
 
         </script>";
+
+        return;
     }
 
     $clicks = intval($clicks);
@@ -66,12 +71,14 @@ if(isset($_POST['view-scores'])){
     if ($conn->query($sql) == true){
         echo "<script type='text/javascript'>
 
-        location.href = 'score-page.html';
+        location.href = 'score-page.php';
 
         </script>";
     }else{
         echo "ERROR";
     }
+
+    return;
 }
 
 if(isset($_POST['logout'])){
@@ -87,6 +94,8 @@ if(isset($_POST['logout'])){
         location.href = 'index.html';
 
         </script>";
+
+        return;
     }
 
     $clicks = intval($clicks);

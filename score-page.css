@@ -1,0 +1,23 @@
+form{
+    width: auto;
+    text-align: center;
+    padding: 10px 50px;
+}
+
+input{
+    padding: 10px 50px;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+table, tr, th{
+    border: 3px solid;
+}
+
+th, tr{
+    padding: 10px 50px;
+}

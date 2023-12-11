@@ -1,4 +1,5 @@
 <?php
+session_start();
 $servername = "localhost";
 $db_username = "bhanson";
 $db_password = "password";
@@ -23,6 +24,8 @@ if (isset($_GET['login'])){
     if ($result->num_rows > 0){
         // store the username 
         // go to the ame page
+        $_SESSION['username'] = $uname;
+
         echo "<script type='text/javascript'>
 
         sessionStorage.setItem('User', '$uname');
@@ -39,5 +42,14 @@ if (isset($_GET['login'])){
 
         </script>";
     }
+    return;
 }
+
+echo "<script type='text/javascript'>
+
+sessionStorage.setItem('Login', 'true');
+location.href = 'register.html';
+
+</script>";
+
 ?>
